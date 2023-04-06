@@ -12,9 +12,7 @@ video.loop = false;
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play()
-	let volumeDisplay = document.querySelector("#volume");
-	volumeDisplay.textContent = (video.volume * 100).toFixed(2) + "%";
-
+	document.querySelector("#volume").textContent = (video.volume *100).toFixed(2) + "%";
 });
 
 // pause button
