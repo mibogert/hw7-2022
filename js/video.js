@@ -12,7 +12,9 @@ video.loop = false;
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play()
-	document.querySelector("#volume").textContent = (video.volume *100).toFixed(2) + "%";
+	let volumeDisplay = document.querySelector("#volume");
+	volumeDisplay.textContent = (video.volume * 100).toFixed(2) + "%";
+
 });
 
 // pause button
@@ -24,7 +26,7 @@ document.querySelector("#pause").addEventListener("click", function() {
 document.querySelector("#slower").addEventListener("click", function() {
 	console.log("Slow Down");
 	video.playbackRate *= 0.9;
-	console.long("New playback rate:", video.playbackRate)
+	console.log("New playback rate:", video.playbackRate)
 });
 // speed up button
 document.querySelector("#faster").addEventListener("click", function() {
